@@ -1,0 +1,33 @@
+startup_message off
+
+# footer
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# White-on-red
+sorendition 04 17
+
+#defflow on # will force screen to process ^S/^Q
+
+# deflogin off
+autodetach on
+
+vbell on
+vbell_msg "  Beep!  "
+
+# Enable using alternate screen for vi
+altscreen on
+
+defscrollback 1000
+
+# Red Hat Hack^H^H^H^HPatch
+# This makes screen treat backspaces '^?' as
+# deletes. THere should be a fix in the code
+# for the way termcap inheritance works,
+# but I dont know where to put it, and this works.
+bindkey -d -k kb stuff \010
+# /Red Hat Patch
+
+
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+project=$1
+
+echo "removing $project from //mirror"
+svk rm //mirror/$project  -m deleting
+echo "removing $project from //local"
+svk rm //local/$project  -m deleting

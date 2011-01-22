@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# sets up system preferences for watching a movie
+defaults -currentHost write com.apple.screensaver idleTime 0
+echo setting Energy Saver preferences
+sudo pmset -a -1
+echo opening Gmote
+open /Applications/Gmote.app
+echo IP is:
+ifconfig | grep 192

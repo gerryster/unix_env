@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# sets up system preferences for normal work
+defaults -currentHost write com.apple.screensaver idleTime 900
+echo setting Energy Saver preferences
+sudo pmset -a 1
+echo shutting down Gmote
+ps -elf | grep -i Gmote.app | grep -v grep | perl -pe's/^\d+\s+(\d+).*/kill $1/' | bash

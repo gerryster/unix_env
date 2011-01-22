@@ -1,0 +1,16 @@
+#!/bin/bash
+
+URL=$1
+
+project=`echo $URL | perl -pe's/(.*\/)(.*)$/$2/'`
+
+function my_run {
+    cmd=$1
+    echo Running: $cmd
+    $cmd
+}
+
+my_run "svk mirror $URL //mirror/$project"
+my_run "svk sync //mirror/$project"
+my_run "svk copy //mirror/$project //local/$project -m copy_project_$project"
+my_run "svk checkout //local/$project"

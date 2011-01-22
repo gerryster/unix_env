@@ -1,0 +1,15 @@
+#!/bin/bash
+
+command=$1
+
+# go to the home dir which contains the checked out projects
+cd
+
+for project in $( svk list //mirror | perl -pe 's#//mirror/##' ); do
+    perl -e'print "-" x 80, "\n"'
+    echo "--- svk $command $project"
+    perl -e'print "-" x 80, "\n"'
+    cd $project
+    svk $command
+    cd -
+done

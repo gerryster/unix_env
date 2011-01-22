@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LOCAL_MD_FILE=`cat ~/.ryan_filesroot`/`cat ~/.ryan_md_file_location`
+
+echo making file in disk read/write
+chmod 600 $LOCAL_MD_FILE || (echo failure! && exit 1)
+echo copying file from the flash disk
+cp -i /Volumes/WALLETFLASH/finance.md $LOCAL_MD_FILE || (echo failure! && exit 1 )
+
+DISK=`diskutil list | grep WALLETFLASH | perl -pe 's/.* (\S+)$/$1/'`
+echo going to eject disk $DISK
+diskutil eject $DISK || (echo failure! && exit 1)

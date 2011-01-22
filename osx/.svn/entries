@@ -1,0 +1,40 @@
+8
+
+dir
+103
+svn+ssh://ryan@bsod.net/svn/ryan/unix/trunk/osx
+svn+ssh://ryan@bsod.net/svn/ryan
+
+
+
+2008-05-09T20:14:42.762973Z
+60
+ryan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57e49f93-b82b-0410-adcd-822f05e2df05
+
+terminall.app-settings
+file
+
+
+
+
+2010-08-26T21:45:21.000000Z
+8e888518e1610d15068fb40a16bc75ba
+2008-05-09T20:14:42.762973Z
+60
+ryan
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+perl -ne'next if /^[-#]/; @cols=split "\t"; print "$cols[9]\n" if $cols[5] == 30 && $cols[6] == 1;' $1 | sort -n
