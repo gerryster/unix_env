@@ -133,8 +133,10 @@ alias psusers="ps -eo user,pid,args | sort | less"
 alias v=vim
 
 # screen
-export TERM_ORIG=$TERM
-export TERM=screen
+#export TERM_ORIG=$TERM
+### This causes problems with gnome-terminal.  Setting TERM manually here
+### causes tab completion to print out strange characters.
+#export TERM=screen
 alias sr="screen -r"
 alias sx="screen -x"
 alias sl="screen -list" # list all of the available screens
