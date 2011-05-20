@@ -118,7 +118,8 @@ $HOME/local/bin:\
 /usr/local/bin:\
 $PATH
 
-export MANPATH=$HOME/local/man:$MANPATH
+# put /usr/local/share/man first for osx with homebrew
+export MANPATH=$HOME/local/man:/usr/local/share/man:$MANPATH
 
 ####################### aliases ############################
 alias cd..='cd ..'

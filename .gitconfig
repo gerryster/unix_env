@@ -1,0 +1,18 @@
+[user]
+	email = gerryster@gmail.com
+	name = Ryan Gerry
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	stat = status
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[merge]
+	tool = opendiffd
+[diff]
+	external = /Users/ryan/bin/git-diff-cmd.sh
