@@ -64,7 +64,7 @@ if [ "$os" = "linux" ] ; then
 elif [ -x /usr/local/bin/ls ] ; then
 	alias ls='/usr/local/bin/ls $ALL --classify'
 elif [ -x /usr/bin/ls ] ; then
-	alias ls='/usr/bin/ls $ALL' 
+	alias ls='/usr/bin/ls $ALL'
 elif [ -x /usr/local/bin/gnuls ] ; then
 	alias ls='/usr/local/bin/gnuls --classify'
 else
@@ -149,8 +149,8 @@ alias hg="history|grep"
 alias vbrc="v ~/.bashrc" # edit the bashrc file
 alias vbp="v ~/.bash_profile" # edit the bash profile file
 alias vvrc="v ~/.vimrc" # edit the vim config
-alias sbrc="source ~/.bashrc" 
-alias sbp="source ~/.bash_profile" 
+alias sbrc="source ~/.bashrc"
+alias sbp="source ~/.bash_profile"
 
 ####################### Subversion ###########################
 # svn stuff
@@ -210,3 +210,6 @@ source ~/.host_roles.bash .bashrc
 
 # RVM for ruby http://rvm.beginrescueend.com/rvm/install/
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# git bash completion
+source git-completion.bash
