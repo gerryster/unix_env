@@ -71,6 +71,8 @@ else
 	alias ls='/bin/ls $ALL -F'
 fi
 
+
+
 #Define ANSI color sequences
 
 NORMAL="\[\033[0m\]"
@@ -92,11 +94,15 @@ else
    SYM='-'
 fi
 
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
 #Define the actual prompt
 
 P1="$CYAN$SYM$BRIGHTCYAN-$BRIGHTBLUE($WHITE\u$CYAN@$WHITE"
 P2="\h$BRIGHTBLUE)$BRIGHTCYAN-$BRIGHTBLUE($BRIGHTWHITE\w$BRIGHTBLUE"
-P3=")$BRIGHTCYAN-$CYAN$SYM$NORMAL\n$CYAN$SYM$BRIGHTCYAN-"
+P3=")$BRIGHTCYAN-$BRIGHTBLUE($NORMAL\$(parse_git_branch)$BRIGHTBLUE)$BRIGHTCYAN-$CYAN$SYM$NORMAL\n$CYAN$SYM$BRIGHTCYAN-"
 P4="$BRIGHTBLUE($BRIGHTWHITE\$?$BRIGHTBLUE)$CYAN>$NORMAL "
 PS1="$P1$P2$P3$P4"
 
@@ -211,5 +217,13 @@ source ~/.host_roles.bash .bashrc
 # RVM for ruby http://rvm.beginrescueend.com/rvm/install/
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# git bash completion
+####################### Git #########################
 source git-completion.bash
+alias gd="git diff HEAD"
+
+# Thanks MHB!
+# use "gitg --all" to see the whole tree
+gitg () {
+        git log --graph --color --date-order --date=short --pretty=tformat:"%h [%an] %ad%Cred%d%Creset %s" "$@" | less -R -S
+}
+

@@ -184,3 +184,5 @@ endfunction
 set nocompatible
 filetype plugin indent on
 let vimclojure#HighlightBuiltins = 1
+
+call pathogen#infect()
