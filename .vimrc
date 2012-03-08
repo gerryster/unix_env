@@ -80,8 +80,8 @@ endif " has("autocmd")
 " all effect indenting and tabs vs spaces
 set expandtab    " change tabs to spaces.  A real tab can be inserted as long
                  " as it is escaped by a Ctrl + V.
-set shiftwidth=4 " number of spaces to use for autoindent
-set tabstop=4    " if tab is pressed, how many colums to move
+set shiftwidth=2 " number of spaces to use for autoindent
+set tabstop=2    " if tab is pressed, how many colums to move
 
 " remove all trailing white space on write:
 " see http://www.vim.org/tips/tip.php?tip_id=721 for more info.
@@ -186,3 +186,6 @@ filetype plugin indent on
 let vimclojure#HighlightBuiltins = 1
 
 call pathogen#infect()
+
+" suggestion from http://vim.wikia.com/wiki/Avoid_the_escape_key
+imap jk <Esc>
