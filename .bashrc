@@ -50,8 +50,6 @@ if [ -f /etc/bashrc ] ; then
 	source /etc/bashrc
 fi
 
-#Aliases
-
 #ls alias
 
 unset ALL
@@ -158,6 +156,9 @@ alias vvrc="v ~/.vimrc" # edit the vim config
 alias sbrc="source ~/.bashrc"
 alias sbp="source ~/.bash_profile"
 
+# ruby
+alias be="bundle exec"
+
 ####################### Subversion ###########################
 # svn stuff
 alias sd="svn diff | $PAGER"
@@ -227,3 +228,8 @@ gitg () {
         git log --graph --color --date-order --date=short --pretty=tformat:"%h [%an] %ad%Cred%d%Creset %s" "$@" | less -R -S
 }
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# in Bash 4.0 and later: The new autocd option causes bash to change to the directory that is the first word in a command.
+shopt -s autocd
