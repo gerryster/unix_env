@@ -1,4 +1,5 @@
 <snippet>
+  <!-- As per http://stackoverflow.com/questions/11085403/writing-custom-completions-in-sublime-text-2 and http://docs.sublimetext.info/en/latest/extensibility/completions.html-->
   <content><![CDATA[
 require 'ruby-debug'; debugger
 ]]></content>
