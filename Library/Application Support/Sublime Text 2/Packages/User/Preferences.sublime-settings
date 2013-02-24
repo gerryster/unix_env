@@ -1,0 +1,6 @@
+// Settings in here override those in "Default/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
+{
+	// Do not ignore the "Vintage" package
+	 "ignored_packages": []
+}
