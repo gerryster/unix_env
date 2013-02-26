@@ -1,0 +1,10 @@
+// From http://stackoverflow.com/questions/9620812/how-do-i-remap-escape-when-in-sublime-text-vintage-mode
+[
+  { "keys": ["j", "k"], 
+    "command": "exit_insert_mode",
+    "context": [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  }
+]
