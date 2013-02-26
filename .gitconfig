@@ -16,3 +16,5 @@
 	tool = opendiffd
 [diff]
 	external = /Users/ryan/bin/git-diff-cmd.sh
+[push]
+	default = matching
