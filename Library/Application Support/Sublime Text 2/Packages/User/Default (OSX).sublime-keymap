@@ -6,5 +6,7 @@
       { "key": "setting.command_mode", "operand": false },
       { "key": "setting.is_widget", "operand": false }
     ]
-  }
+  },
+  // Show all methods in the current class.
+  { "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} }
 ]
