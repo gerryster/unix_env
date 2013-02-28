@@ -220,14 +220,14 @@ source ~/.host_roles.bash .bashrc
 
 ####################### Git #########################
 source git-completion.bash
-alias gd="git diff HEAD"
+alias gd="git diff head"
+alias gds="git diff && git stat"
 
 # Thanks MHB!
 # use "gitg --all" to see the whole tree
 gitg () {
         git log --graph --color --date-order --date=short --pretty=tformat:"%h [%an] %ad%Cred%d%Creset %s" "$@" | less -R -S
 }
-
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
