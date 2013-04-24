@@ -6,3 +6,14 @@ git clone --bare git@github.com:gerryster/unix_env.git .git
 $ vim .git/config
 # remove the "bare=true" line
 $ git checkout master
+
+Sublime Text Packages to Install:
+Package Control
+GotoRecent
+Git
+Haml
+SideBarEnhancements
+SublimeLinter
+All Autocomplete
+HTML5
+Syntax Highlight for SASS
