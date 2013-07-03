@@ -110,7 +110,9 @@ PS1="$P1$P2$P3$P4"
 export ACK_COLOR_MATCH=underline
 export ACK_COLOR_FILENAME=green
 
-export EDITOR=vim
+export EDITOR='subl -w'
+# TODO(make vim the editor if the subl symlink does not point to anything)
+# export EDITOR=vim
 
 # history stuff:
 # HISTCONTROL controls what is added to the history file, ignoreboth means don't but blank lines or duplicates in (p. 67)
@@ -216,7 +218,7 @@ export TZ='America/Chicago'
 source ~/.host_roles.bash .bashrc
 
 # RVM for ruby http://rvm.beginrescueend.com/rvm/install/
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+#[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 ####################### Git #########################
 source git-completion.bash
@@ -233,3 +235,13 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # in Bash 4.0 and later: The new autocd option causes bash to change to the directory that is the first word in a command.
 shopt -s autocd
+
+####################### AWS #########################
+export AWS_CONFIG_FILE=~/.aws
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
+####################### rbenv #########################
+eval "$(rbenv init -)"

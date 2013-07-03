@@ -1,17 +1,18 @@
-// Settings in here override those in "Default/Preferences.sublime-settings", and
-// are overridden in turn by file type specific settings.
 {
 	"auto_complete_commit_on_tab": true,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
 	"default_line_ending": "unix",
 	"fallback_encoding": "UTF-8",
-	// Do not ignore the "Vintage" package for vi key bindings.
-	"ignored_packages": [],
-	"save_on_focus_lost": true,
+	"ignored_packages":
+	[
+	],
+	"save_on_focus_lost": false,
 	"spell_check": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"ensure_newline_at_eof_on_save": true
 }
