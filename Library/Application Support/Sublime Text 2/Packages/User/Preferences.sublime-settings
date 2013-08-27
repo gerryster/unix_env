@@ -3,9 +3,12 @@
 	"caret_style": "wide",
 	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
 	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
 	"fallback_encoding": "UTF-8",
+	"font_size": 12.0,
 	"ignored_packages":
 	[
+		"Git"
 	],
 	"save_on_focus_lost": false,
 	"spell_check": true,
@@ -14,5 +17,9 @@
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
 	"word_wrap": true,
-	"ensure_newline_at_eof_on_save": true
+	// Use the correct rbenv version (from http://stackoverflow.com/questions/9153210/configuring-the-sublime-linter-plugin-to-use-ruby-1-9-syntax).
+	"sublimelinter_executable_map":
+	{
+	  "ruby": "~/.rbenv/shims/ruby"
+	}
 }
