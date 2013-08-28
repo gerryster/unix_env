@@ -1,0 +1,22 @@
+{
+	// do NOT ignore vintage
+	"ignored_packages": [],
+	"auto_complete_commit_on_tab": true,
+	"caret_style": "wide",
+	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"fallback_encoding": "UTF-8",
+	"font_size": 12.0,
+	"save_on_focus_lost": false,
+	"spell_check": true,
+	"sublimelinter_executable_map":
+	{
+		"ruby": "~/.rbenv/shims/ruby"
+	},
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true,
+	"word_wrap": true
+}
