@@ -98,6 +98,7 @@ function parse_git_branch {
 
 #Define the actual prompt
 
+# TODO: the problem with the return code is that the git prompt command is running before $? evaluates.  Perhaps $? can be saved off?
 P1="$CYAN$SYM$BRIGHTCYAN-$BRIGHTBLUE($WHITE\u$CYAN@$WHITE"
 P2="\h$BRIGHTBLUE)$BRIGHTCYAN-$BRIGHTBLUE($BRIGHTWHITE\w$BRIGHTBLUE"
 P3=")$BRIGHTCYAN-$BRIGHTBLUE($NORMAL\$(parse_git_branch)$BRIGHTBLUE)$BRIGHTCYAN-$CYAN$SYM$NORMAL\n$CYAN$SYM$BRIGHTCYAN-"
