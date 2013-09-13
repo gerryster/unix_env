@@ -110,9 +110,9 @@ PS1="$P1$P2$P3$P4"
 export ACK_COLOR_MATCH=underline
 export ACK_COLOR_FILENAME=green
 
-export EDITOR='subl -w'
+# export EDITOR='subl -w'
 # TODO(make vim the editor if the subl symlink does not point to anything)
-# export EDITOR=vim
+export EDITOR=vim
 
 # history stuff:
 # HISTCONTROL controls what is added to the history file, ignoreboth means don't but blank lines or duplicates in (p. 67)
@@ -221,7 +221,7 @@ source ~/.host_roles.bash .bashrc
 #[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 ####################### Git #########################
-source git-completion.bash
+source ~/bin/git-completion.bash
 alias gd="git diff head"
 alias gds="git diff && git stat"
 
