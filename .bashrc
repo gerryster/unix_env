@@ -246,3 +246,17 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ####################### rbenv #########################
 eval "$(rbenv init -)"
+
+####################### pow #########################
+export POW_TIMEOUT=86400  # (one day)
+
+# command multiplexer
+function cmux {
+  for dir in *; do
+    cd $dir
+    echo
+    echo "Run '$@' in project $dir..."
+    "$@"
+    cd ..
+done
+}
