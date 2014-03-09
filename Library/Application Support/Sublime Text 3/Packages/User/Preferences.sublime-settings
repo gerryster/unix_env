@@ -5,7 +5,11 @@
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"fallback_encoding": "UTF-8",
-	"folder_exclude_patterns": [".sass-cache"],
+	"folder_exclude_patterns":
+	[
+		".sass-cache",
+		".git"
+	],
 	"font_size": 12.0,
 	"ignored_packages":
 	[
@@ -20,5 +24,6 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"match_brackets": false
 }

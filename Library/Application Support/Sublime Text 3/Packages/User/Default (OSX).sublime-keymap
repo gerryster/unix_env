@@ -8,5 +8,30 @@
     ]
   },
   // Show all methods in the current class.
-  { "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} }
+  { "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+
+  // Clojure settings from https://gist.github.com/jamesmacaulay/5457344
+
+  // BracketHighlighter bindings:
+  // ===========================
+
+  // Swap bracket type
+  { "keys": ["ctrl+shift+]"],
+    "command": "swap_brackets"},
+
+  // Swap quotes (only goes boths ways in supported languages...)
+  { "keys": ["ctrl+shift+'"],
+    "command": "bh_key", "args": {"lines" : true, "plugin": {"type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"], "command": "bh_modules.swapquotes"} }},
+
+  // Select text between brackets
+  { "keys": ["ctrl+alt+a"],
+    "command": "bh_key", "args": {"lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect"} } },
+
+  // Select tag name of HTML/XML tag (both opening name and closing)
+  { "keys": ["ctrl+alt+t"],
+    "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect"} } },
+
+  // Toggle high visibility mode
+  { "keys": ["alt+super+="],
+    "command": "bh_toggle_high_visibility"}
 ]
