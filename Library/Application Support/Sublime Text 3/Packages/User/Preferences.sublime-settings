@@ -13,7 +13,9 @@
 	"font_size": 12.0,
 	"ignored_packages":
 	[
+		"paredit"
 	],
+	"match_brackets": false,
 	"save_on_focus_lost": false,
 	"spell_check": true,
 	"sublimelinter_executable_map":
@@ -24,6 +26,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
-	"word_wrap": true,
-	"match_brackets": false
+	"word_wrap": true
 }
