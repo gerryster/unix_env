@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+run_count = 0
+command = ARGV.join(' ')
+puts "command is: #{command}"
+
+while(Kernel.system command) do
+  run_count = run_count + 1
+  puts "\n#{run_count} successful run(s)\n"
+end
+
+puts "\n failure after #{run_count} run(s)"
