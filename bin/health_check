@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+options = {
+  tries: 10
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Check the health of a command by running it over and over again.\nUsage: [options] your_command"
+
+  opts.on("-t", "--tries num_tries", Integer, "Number of times to try the command.  Defaults to ten.") do |t|
+    options[:tries] = t
+  end
+end.parse!
+
+class HealthCheck
+  def initialize(command, tries)
+    @command = command
+    @tries = tries
+    @run_count = 0
+    @success_count = 0
+  end
+
+  def stats
+    "\n#{((@success_count/@run_count.to_f) * 100).round(2)}% health: #{@success_count} out of #{@run_count} runs succeeding\n"
+  end
+
+  def run
+    while(@run_count < @tries) do
+      @success_count = @success_count + 1 if(Kernel.system @command)
+      @run_count = @run_count + 1
+      puts stats()
+    end
+  end
+end
+
+health = HealthCheck.new ARGV.join(' '), options[:tries]
+health.run
+puts "--------------------------"
+puts health.stats
