@@ -224,6 +224,7 @@ source ~/.host_roles.bash .bashrc
 ####################### Git #########################
 source ~/bin/git-completion.bash
 alias gd="git diff head"
+alias gs="git stat"
 alias gds="git diff && git stat"
 
 # Thanks MHB!
