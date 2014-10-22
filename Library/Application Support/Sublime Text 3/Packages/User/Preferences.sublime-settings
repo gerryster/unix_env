@@ -15,7 +15,8 @@
 	"font_size": 12.0,
 	"ignored_packages":
 	[
-		"paredit"
+		"paredit",
+		//"Vintage"
 	],
 	"match_brackets": false,
 	"save_on_focus_lost": true,
