@@ -1,0 +1,1 @@
+alert('invalid script source');
