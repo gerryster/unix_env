@@ -235,6 +235,7 @@ gitg () {
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+
 # in Bash 4.0 and later: The new autocd option causes bash to change to the directory that is the first word in a command.
 shopt -s autocd
 
@@ -261,3 +262,6 @@ function cmux {
     cd ..
 done
 }
+
+####################### Rails #########################
+alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
