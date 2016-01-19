@@ -149,6 +149,7 @@ alias sr="screen -r"
 alias sx="screen -x"
 alias sl="screen -list" # list all of the available screens
 alias sS="screen -U -S" # start a screen session and specify a name in UTF-8 mode (-U)
+alias alert='tput bel'
 
 alias hg="history|grep"
 
