@@ -266,3 +266,6 @@ done
 
 ####################### Rails #########################
 alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
+
+export NVM_DIR="/Users/ryangerry/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
