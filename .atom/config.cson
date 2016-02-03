@@ -1,0 +1,35 @@
+"*":
+  core:
+    disabledPackages: [
+      "emmet"
+    ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      "node_modules"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 100
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+    tabType: "soft"
+  emmet: {}
+  "exception-reporting":
+    userId: "1a5ce082-c601-72c2-8e46-759b50b7a862"
+  "file-types":
+    arb: "source.ruby"
+  "language-babel": {}
+  linter:
+    showErrorPanel: false
+  "linter-eslint": {}
+  "linter-ruby": {}
+  metrics:
+    userId: "78c8a82c813d3b91f3dddcbb52c24d0f3d9a8e34"
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
