@@ -6,13 +6,19 @@
     excludeVcsIgnoredPaths: false
     ignoredNames: [
       "node_modules"
+      ".git"
     ]
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
+  "custom-title":
+    template: '''
+      <%= relativeFilePath %><% if (projectPath) { %> - <%= projectPath %><% if (gitHead) { %> [<%= gitHead %>]<% } %><% } %>
+      
+    '''
   editor:
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
