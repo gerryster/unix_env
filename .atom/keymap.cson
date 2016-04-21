@@ -18,3 +18,9 @@
 #
 'atom-text-editor.vim-mode.insert-mode':
   'j k': 'vim-mode:activate-normal-mode'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'g q': 'autoflow:reflow-selection'
+
+'atom-text-editor.vim-mode.operator-pending-mode, atom-text-editor.vim-mode.visual-mode':
+  'g q': 'autoflow:reflow-selection'
