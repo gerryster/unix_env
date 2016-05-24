@@ -227,6 +227,8 @@ source ~/bin/git-completion.bash
 alias gd="git diff head"
 alias gs="git stat"
 alias gds="git diff && git stat"
+# Adapted from http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit :
+alias grecent="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | tail"
 
 # Thanks MHB!
 # use "gitg --all" to see the whole tree
