@@ -8,3 +8,4 @@ zstyle :compinstall filename '/Users/rgerry/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

@@ -18,11 +18,12 @@
       
     '''
   editor:
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 2
     tabType: "soft"
   emmet: {}
   "exception-reporting":
@@ -36,6 +37,7 @@
   "linter-ruby": {}
   metrics:
     userId: "78c8a82c813d3b91f3dddcbb52c24d0f3d9a8e34"
-  "vim-mode": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
