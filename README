@@ -7,7 +7,15 @@ $ vim .git/config
 # remove the "bare=true" line
 $ git checkout master
 
-Sublime Text Packages to Install:
+## Atom packages to install
+* copy-path
+* linter
+* vim-mode
+* git-plus
+* custom-title with this config `<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>`
+
+
+## Sublime Text Packages to Install:
 Package Control
 GotoRecent
 Git
