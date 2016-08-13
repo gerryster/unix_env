@@ -1,9 +1,21 @@
 "*":
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "emmet"
+      "tree-view"
     ]
-    excludeVcsIgnoredPaths: false
     ignoredNames: [
       "node_modules"
       ".git"
@@ -13,10 +25,7 @@
       "atom-dark-syntax"
     ]
   "custom-title":
-    template: '''
-      <%= relativeFilePath %><% if (projectPath) { %> - <%= projectPath %><% if (gitHead) { %> [<%= gitHead %>]<% } %><% } %>
-      
-    '''
+    template: "<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>"
   editor:
     fontSize: 12
     invisibles: {}
@@ -30,6 +39,8 @@
     userId: "1a5ce082-c601-72c2-8e46-759b50b7a862"
   "file-types":
     arb: "source.ruby"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "language-babel": {}
   linter:
     showErrorPanel: false
@@ -37,7 +48,11 @@
   "linter-ruby": {}
   metrics:
     userId: "78c8a82c813d3b91f3dddcbb52c24d0f3d9a8e34"
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "vim-mode":
     useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
+  whitespace: {}
