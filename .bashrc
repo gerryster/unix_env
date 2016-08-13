@@ -97,13 +97,23 @@ fi
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-#Define the actual prompt
+determine_previous_command_result() {
+  local result=$?
+  case "$result" in
+   0) previous_command_success_icon='✓'
+      previous_command_error_icon='' ;;
+   *) previous_command_error_icon="⚠  $result"
+      previous_command_success_icon='' ;;
+  esac
+}
 
-# TODO: the problem with the return code is that the git prompt command is running before $? evaluates.  Perhaps $? can be saved off?
+PROMPT_COMMAND="determine_previous_command_result; $PROMPT_COMMAND"
+
+#Define the actual prompt
 P1="$CYAN$SYM$BRIGHTCYAN-$BRIGHTBLUE($WHITE\u$CYAN@$WHITE"
 P2="\h$BRIGHTBLUE)$BRIGHTCYAN-$BRIGHTBLUE($BRIGHTWHITE\w$BRIGHTBLUE"
 P3=")$BRIGHTCYAN-$BRIGHTBLUE\$git_branch\[$txtred\]\$git_dirty$BRIGHTCYAN-$CYAN$SYM$NORMAL\n$CYAN$SYM$BRIGHTCYAN-"
-P4="$BRIGHTBLUE($BRIGHTWHITE\$?$BRIGHTBLUE)$CYAN>$NORMAL "
+P4="$BRIGHTBLUE($BRIGHTWHITE\$previous_command_success_icon$txtred\$previous_command_error_icon$BRIGHTBLUE)$CYAN>$NORMAL "
 PS1="$P1$P2$P3$P4"
 
 ####################### variables ############################
