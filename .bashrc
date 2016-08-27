@@ -113,7 +113,7 @@ PROMPT_COMMAND="determine_previous_command_result; $PROMPT_COMMAND"
 P1="$CYAN$SYM$BRIGHTCYAN-$BRIGHTBLUE($WHITE\u$CYAN@$WHITE"
 P2="\h$BRIGHTBLUE)$BRIGHTCYAN-$BRIGHTBLUE($BRIGHTWHITE\w$BRIGHTBLUE"
 P3=")$BRIGHTCYAN-$BRIGHTBLUE\$git_branch\[$txtred\]\$git_dirty$BRIGHTCYAN-$CYAN$SYM$NORMAL\n$CYAN$SYM$BRIGHTCYAN-"
-P4="$BRIGHTBLUE($BRIGHTWHITE\$previous_command_success_icon$txtred\$previous_command_error_icon$BRIGHTBLUE)$CYAN>$NORMAL "
+P4="$BRIGHTBLUE($BRIGHTWHITE\$previous_command_success_icon\$previous_command_error_icon$BRIGHTBLUE)$CYAN>$NORMAL "
 PS1="$P1$P2$P3$P4"
 
 ####################### variables ############################
