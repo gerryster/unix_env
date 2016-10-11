@@ -25,12 +25,13 @@
       "atom-dark-syntax"
     ]
   "custom-title":
-    template: "<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>"
+    template: "<%= projectName %>: <%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>"
   editor:
-    fontSize: 12
+    fontSize: 11
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
+    softWrap: true
     softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 2
     tabType: "soft"
