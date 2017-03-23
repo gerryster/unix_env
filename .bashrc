@@ -214,6 +214,25 @@ function topdf {
     enscript  --title='$1' -fCourier8 --header-font=Courier-Bold8 --pretty-print=perl --line-numbers -p- $1 --tabsize=4 | ps2pdf - $1.pdf
 }
 
+# Find the plist file for something in LaunchCtl:
+# This is required to unload a deamon so that it does not get restarted.
+# http://stackoverflow.com/questions/18502705/how-to-know-a-specific-launchd-plist-file-location
+launchctlFind () {
+    LaunchctlPATHS=( \
+        ~/Library/LaunchAgents \
+        /Library/LaunchAgents \
+        /Library/LaunchDaemons \
+        /System/Library/LaunchAgents \
+        /System/Library/LaunchDaemons \
+    )
+
+    for curPATH in "${LaunchctlPATHS[@]}"
+    do
+        grep -r "$curPATH" -e "$1"
+    done
+    return 0;
+}
+
 ####################### host specific config #####################
 if [ -f ~/host_config/$HOSTNAME/.bashrc ]; then
       source ~/host_config/$HOSTNAME/.bashrc
