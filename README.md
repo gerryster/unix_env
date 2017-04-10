@@ -16,6 +16,7 @@ $ git checkout master
 * vim-mode
 * git-plus
 * custom-title with this config `<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>`
+* set-syntax
 
 
 ## Sublime Text Packages to Install:
