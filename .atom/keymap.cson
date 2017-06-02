@@ -24,3 +24,7 @@
 
 'atom-text-editor.vim-mode.operator-pending-mode, atom-text-editor.vim-mode.visual-mode':
   'g q': 'autoflow:reflow-selection'
+
+# from https://github.com/t9md/atom-vim-mode-plus/wiki/TIPS#escape-from-insert-mode-by-typing-jk-quickly
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'j k': 'vim-mode-plus:activate-normal-mode' # jk to escape
