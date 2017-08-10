@@ -18,7 +18,7 @@ $ git checkout master
 * custom-title with this config `<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>`
 * set-syntax
 * [goto-definition](https://atom.io/packages/goto-definition)
-
+* [open-on-bitbucket](https://atom.io/packages/open-on-bitbucket)
 
 ## Sublime Text Packages to Install:
 
