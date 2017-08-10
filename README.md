@@ -11,12 +11,13 @@ $ git checkout master
 
 ## Atom packages to install
 * copy-path
-* linter
+* [linter](https://atom.io/packages/linter]
 * linter-eslint
 * vim-mode
 * git-plus
 * custom-title with this config `<%= relativeFilePath %><% if (projectPath && gitHead) { %> [<%= gitHead %>] <% } %>`
 * set-syntax
+* [goto-definition](https://atom.io/packages/goto-definition)
 
 
 ## Sublime Text Packages to Install:
