@@ -11,7 +11,7 @@ $ git checkout master
 
 ## Atom packages to install
 * copy-path
-* [linter](https://atom.io/packages/linter]
+* [linter](https://atom.io/packages/linter)
 * linter-eslint
 * vim-mode
 * git-plus
