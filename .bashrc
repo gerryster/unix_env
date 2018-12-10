@@ -166,6 +166,7 @@ alias hg="history|grep"
 
 # config file stuff:
 alias vbrc="v ~/.bashrc" # edit the bashrc file
+alias vhbrc="v ~/host_config/$HOSTNAME/.bashrc" # edit the host specific bashrc file
 alias vbp="v ~/.bash_profile" # edit the bash profile file
 alias vvrc="v ~/.vimrc" # edit the vim config
 alias sbrc="source ~/.bashrc"
