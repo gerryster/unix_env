@@ -189,3 +189,5 @@ call pathogen#infect()
 
 " suggestion from http://vim.wikia.com/wiki/Avoid_the_escape_key
 imap jk <Esc>
+
+set spell

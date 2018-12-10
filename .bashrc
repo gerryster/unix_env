@@ -173,6 +173,7 @@ alias sbp="source ~/.bash_profile"
 
 # ruby
 alias be="bundle exec"
+alias bopen="EDITOR=atom bundle open"
 
 ####################### Subversion ###########################
 # svn stuff
@@ -254,9 +255,12 @@ source ~/.host_roles.bash .bashrc
 
 ####################### Git #########################
 source ~/bin/git-completion.bash
-alias gd="git diff head"
 alias gs="git stat"
-alias gds="git diff && git stat"
+alias gp="git pull"
+alias gdas="git diff && git stat"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gdh="git diff head"
 # Adapted from http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit :
 alias grecent="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | tail"
 
@@ -266,7 +270,7 @@ gitg () {
         git log --graph --color --date-order --date=short --pretty=tformat:"%h [%an] %ad%Cred%d%Creset %s" "$@" | less -R -S
 }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME:/usr/local/Cellar/mysql@5.6/5.6.38/bin
 
 
 # in Bash 4.0 and later: The new autocd option causes bash to change to the directory that is the first word in a command.
@@ -298,6 +302,12 @@ done
 
 ####################### Rails #########################
 alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
+alias migratetest="RAILS_ENV=test be rake db:migrate"
+alias reset_test="RAILS_ENV=test be rake db:reset --trace"
+alias reset_and_run="reset_test && be rspec; say tests done"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Elixir
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
