@@ -166,6 +166,7 @@ alias hg="history|grep"
 
 # config file stuff:
 alias vbrc="v ~/.bashrc" # edit the bashrc file
+alias vhbrc="v ~/host_config/$HOSTNAME/.bashrc" # edit the host specific bashrc file
 alias vbp="v ~/.bash_profile" # edit the bash profile file
 alias vvrc="v ~/.vimrc" # edit the vim config
 alias sbrc="source ~/.bashrc"
@@ -306,8 +307,9 @@ alias migratetest="RAILS_ENV=test be rake db:migrate"
 alias reset_test="RAILS_ENV=test be rake db:reset --trace"
 alias reset_and_run="reset_test && be rspec; say tests done"
 
+####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -d "$NVM_DIR" ] &&  source "/usr/local/opt/nvm/nvm.sh"
 
 # Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
