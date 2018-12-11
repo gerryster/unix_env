@@ -307,8 +307,9 @@ alias migratetest="RAILS_ENV=test be rake db:migrate"
 alias reset_test="RAILS_ENV=test be rake db:reset --trace"
 alias reset_and_run="reset_test && be rspec; say tests done"
 
+####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -d "$NVM_DIR" ] &&  source "/usr/local/opt/nvm/nvm.sh"
 
 # Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
