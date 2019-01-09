@@ -32,5 +32,13 @@
     "editor.wrappingIndent": "indent",
     "editor.renderWhitespace": "none",
     "workbench.sideBar.location": "left",
-    "files.insertFinalNewline": true
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.maxColumn": 100,
+    "files.trimFinalNewlines": true,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": -1,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.rulers": [100]
 }

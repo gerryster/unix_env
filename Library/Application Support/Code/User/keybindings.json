@@ -4,5 +4,18 @@
     "key": "cmd+shift+\\",
     "command": "workbench.files.action.showActiveFileInExplorer",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
   }
 ]
