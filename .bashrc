@@ -285,7 +285,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 
 ####################### rbenv #########################
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ####################### pow #########################
 export POW_TIMEOUT=86400  # (one day)
@@ -309,7 +309,28 @@ alias reset_and_run="reset_test && be rspec; say tests done"
 
 ####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
-[ -d "$NVM_DIR" ] &&  source "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+# added by travis gem
+[ -f /Users/rgerry/.travis/travis.sh ] && source /Users/rgerry/.travis/travis.sh
+
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+####################### Home Brew #########################
+# load all installed completions (https://apple.stackexchange.com/questions/103818/bash-not-running-script-at-opt-local-etc-bash-completion-d):
+if [ -d /usr/local/etc/bash_completion.d ]; then
+    for F in "/usr/local/etc/bash_completion.d/"*; do
+        if [ -f "${F}" ]; then
+            source "${F}";
+        fi
+    done
+fi
+
+####################### Docker #########################
+alias d=docker
+alias dl='docker images'
+alias dr='docker run'
