@@ -124,7 +124,7 @@ export ACK_COLOR_FILENAME=green
 
 # export EDITOR='subl -w'
 # TODO(make vim the editor if the subl symlink does not point to anything)
-export EDITOR=vim
+export EDITOR='code --wait'
 
 # history stuff:
 # HISTCONTROL controls what is added to the history file, ignoreboth means don't but blank lines or duplicates in (p. 67)
@@ -258,6 +258,7 @@ source ~/.host_roles.bash .bashrc
 source ~/bin/git-completion.bash
 alias gs="git stat"
 alias gp="git pull"
+alias gps="git push"
 alias gdas="git diff && git stat"
 alias gd="git diff"
 alias gds="git diff --staged"
