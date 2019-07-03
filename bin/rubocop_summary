@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Prints a summary of Rubocop violations
+bundle exec rubocop | grep 'C:' | perl -pe 's/.* C: (\S+):.*/$1/' | sort | uniq -c
