@@ -9,6 +9,22 @@ $ vim .git/config
 $ git checkout master
 ```
 
+## VS Code Extensions to install
+
+* All Autocomplete
+* Atom Keymap 
+* Code Spell Checker
+* EditorConfig for VS Code
+* GitLense
+* markdownlint
+* npm intellisense
+* Open in Github (highly recommended! Also works with Bitbucket)
+* Ruby
+* ruby-rubocop
+* vscode-spitify
+* YAML
+* YAML key viewer
+
 ## Atom packages to install
 * copy-path
 * [linter](https://atom.io/packages/linter)
