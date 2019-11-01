@@ -175,6 +175,7 @@ alias sbp="source ~/.bash_profile"
 # ruby
 alias be="bundle exec"
 alias bopen="EDITOR=atom bundle open"
+alias rchanged='git diff --name-only | xargs rubocop'
 
 ####################### Subversion ###########################
 # svn stuff
@@ -260,6 +261,8 @@ alias gs="git stat"
 alias gp="git pull"
 alias gps="git push"
 alias gdas="git diff && git stat"
+# https://stackoverflow.com/questions/2466821/how-do-i-pipe-in-filemerge-as-a-diff-tool-with-git-on-os-x
+alias gdopendiff="git difftool -t opendiff -y"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gdh="git diff head"
