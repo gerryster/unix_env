@@ -12,7 +12,7 @@ $ git checkout master
 ## VS Code Extensions to install
 
 * All Autocomplete
-* Atom Keymap 
+* Atom Keymap
 * Code Spell Checker
 * EditorConfig for VS Code
 * GitLense
@@ -24,6 +24,7 @@ $ git checkout master
 * vscode-spitify
 * YAML
 * YAML key viewer
+* [Paste and Indent](https://marketplace.visualstudio.com/items?itemName=Rubymaniac.vscode-paste-and-indent)
 
 ## Atom packages to install
 * copy-path

@@ -17,5 +17,20 @@
   {
     "key": "shift+cmd+o",
     "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "extension.goToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-extension.goToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+      "key": "cmd+shift+v",
+      "command": "extension.paste-and-indent",
+      "when": "editorTextFocus && !editorReadonly"
   }
 ]
