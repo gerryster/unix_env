@@ -175,7 +175,7 @@ alias sbp="source ~/.bash_profile"
 # ruby
 alias be="bundle exec"
 alias bopen="EDITOR=atom bundle open"
-alias rchanged='git diff --name-only | xargs rubocop'
+alias rchanged='git diff --name-only | xargs bundle exec rubocop'
 
 ####################### Subversion ###########################
 # svn stuff
@@ -186,8 +186,8 @@ export P4DIFFOPTS=-du
 
 ####################### functions ############################
 # print $PATH replacing ':' with '\n'.
-# Also prints anything in PATH format (seporated by ':') given as an argument.
-# See page 102 of bash book for an explination of the echo statement
+# Also prints anything in PATH format (separated by ':') given as an argument.
+# See page 102 of bash book for an explanation of the echo statement
 #
 # this has a BUG where if an undefined variable is passed, the function prints out $PATH
 function prettypath {
@@ -281,8 +281,14 @@ PATH=$PATH:$HOME:/usr/local/Cellar/mysql@5.6/5.6.38/bin
 # in Bash 4.0 and later: The new autocd option causes bash to change to the directory that is the first word in a command.
 shopt -s autocd
 
+####################### GPG #########################
+# This allows GPG v2 to work with Git.
+# https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
+export GPG_TTY=$(tty)
+
 ####################### AWS #########################
-export AWS_CONFIG_FILE=~/.aws
+# This breaks the Ruby client!!!
+# export AWS_CONFIG_FILE=~/.aws
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -310,6 +316,7 @@ alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
 alias migratetest="RAILS_ENV=test be rake db:migrate"
 alias reset_test="RAILS_ENV=test be rake db:reset --trace"
 alias reset_and_run="reset_test && be rspec; say tests done"
+alias test_and_notify="be rspec; notify_me tests done"
 
 ####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
