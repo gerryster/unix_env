@@ -150,6 +150,7 @@ alias psme="ps -fu $USER"
 alias lpsme="ps -flu $USER" # long format
 alias psusers="ps -eo user,pid,args | sort | less"
 alias v=vim
+alias e="$EDITOR ."
 
 # screen
 #export TERM_ORIG=$TERM
@@ -316,7 +317,7 @@ alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
 alias migratetest="RAILS_ENV=test be rake db:migrate"
 alias reset_test="RAILS_ENV=test be rake db:reset --trace"
 alias reset_and_run="reset_test && be rspec; say tests done"
-alias test_and_notify="be rspec; notify_me tests done"
+alias test_and_notify="be rspec; notifyme tests done"
 
 ####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
