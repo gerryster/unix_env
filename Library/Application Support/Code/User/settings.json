@@ -36,9 +36,14 @@
     "editor.minimap.maxColumn": 100,
     "files.trimFinalNewlines": true,
     "editor.minimap.enabled": false,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
-    "editor.rulers": [100]
+    "editor.rulers": [
+        100
+    ],
+    "gitlens.mode.active": "zen",
+    "gitlens.gitCommands.closeOnFocusOut": true,
+    "files.insertFinalNewline": true
 }
