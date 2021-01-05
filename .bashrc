@@ -312,12 +312,13 @@ function cmux {
 done
 }
 
-####################### Rails #########################
+####################### Rails/Ruby #########################
 alias migrateall="be rake db:migrate && RAILS_ENV=test be rake db:migrate"
 alias migratetest="RAILS_ENV=test be rake db:migrate"
 alias reset_test="RAILS_ENV=test be rake db:reset --trace"
 alias reset_and_run="reset_test && be rspec; say tests done"
 alias test_and_notify="be rspec; notifyme tests done"
+alias r="be rake"
 
 ####################### Node #########################
 export NVM_DIR="$HOME/.nvm"
@@ -346,3 +347,4 @@ fi
 alias d=docker
 alias dl='docker images'
 alias dr='docker run'
+alias doc=docker-compose
