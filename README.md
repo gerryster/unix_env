@@ -6,7 +6,7 @@ git clone --bare git@github.com:gerryster/unix_env.git .git
 # Cloning the repo with the "bare" option allows it to be created in an existing directory.
 $ vim .git/config
 # remove the "bare=true" line
-$ git checkout master
+$ git checkout main
 
 # Git Aware Prompt:
 cd ~/.bash
