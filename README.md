@@ -7,6 +7,10 @@ git clone --bare git@github.com:gerryster/unix_env.git .git
 $ vim .git/config
 # remove the "bare=true" line
 $ git checkout master
+
+# Git Aware Prompt:
+cd ~/.bash
+git clone https://github.com/jimeh/git-aware-prompt.git
 ```
 
 ## VS Code Extensions to install
