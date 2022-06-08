@@ -321,16 +321,8 @@ alias reset_and_run="reset_test && be rspec; say tests done"
 alias test_and_notify="be rspec; notifyme tests done"
 alias r="be rake"
 
-####################### Node #########################
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
 # Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-
-# added by travis gem
-[ -f /Users/rgerry/.travis/travis.sh ] && source /Users/rgerry/.travis/travis.sh
 
 #export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -343,6 +335,11 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
         fi
     done
 fi
+
+
+####################### Volta #########################
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 
 ####################### Docker #########################
 alias d=docker
