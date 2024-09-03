@@ -349,3 +349,9 @@ alias d=docker
 alias dl='docker images'
 alias dr='docker run'
 alias doc=docker-compose
+
+####################### Rust #########################
+source /Users/ryan/.asdf/installs/rust/1.61.0/env
+
+####################### PNPM #########################
+alias p=pnpm
