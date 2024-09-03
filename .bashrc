@@ -262,6 +262,7 @@ source ~/bin/git-completion.bash
 alias gs="git stat"
 alias gp="git pull"
 alias gps="git push"
+alias gap="git add -p"
 alias gdas="git diff && git stat"
 # https://stackoverflow.com/questions/2466821/how-do-i-pipe-in-filemerge-as-a-diff-tool-with-git-on-os-x
 alias gdopendiff="git difftool -t opendiff -y"
