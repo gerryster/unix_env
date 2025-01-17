@@ -188,6 +188,6 @@ let vimclojure#HighlightBuiltins = 1
 call pathogen#infect()
 
 " suggestion from http://vim.wikia.com/wiki/Avoid_the_escape_key
-imap jk <Esc>
+inoremap jk <Esc>
 
 set spell

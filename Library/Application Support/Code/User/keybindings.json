@@ -32,5 +32,10 @@
     "key": "cmd+shift+v",
     "command": "extension.paste-and-indent",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-revealFileInOS",
+    "when": "!editorFocus"
   }
 ]

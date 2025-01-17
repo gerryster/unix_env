@@ -140,6 +140,8 @@ $PATH
 # put /usr/local/share/man first for osx with homebrew
 export MANPATH=$HOME/local/man:/usr/local/share/man:$MANPATH
 
+export PAGER=bat
+
 ####################### aliases ############################
 alias cd..='cd ..'
 # csh style: alias psg='ps -ax | grep \!* | grep -v grep'
@@ -259,12 +261,16 @@ source ~/.host_roles.bash .bashrc
 
 ####################### Git #########################
 source ~/bin/git-completion.bash
+alias g="git"
+alias gap="git add -p"
 alias gs="git stat"
+alias gcm="git commit -m"
 alias gp="git pull"
 alias gps="git push"
 alias gdas="git diff && git stat"
 # https://stackoverflow.com/questions/2466821/how-do-i-pipe-in-filemerge-as-a-diff-tool-with-git-on-os-x
 alias gdopendiff="git difftool -t opendiff -y"
+alias gc="git ci"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gdh="git diff head"
@@ -324,22 +330,19 @@ alias r="be rake"
 # Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
-#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+####################### Yarn #############################
+alias yr="yarn run"
 
 ####################### Home Brew #########################
 # load all installed completions (https://apple.stackexchange.com/questions/103818/bash-not-running-script-at-opt-local-etc-bash-completion-d):
 if [ -d /usr/local/etc/bash_completion.d ]; then
-    for F in "/usr/local/etc/bash_completion.d/"*; do
-        if [ -f "${F}" ]; then
-            source "${F}";
-        fi
-    done
+     for F in "/usr/local/etc/bash_completion.d/"*; do
+         if [ -f "${F}" ]; then
+             source "${F}";
+         fi
+     done
 fi
 
-
-####################### Volta #########################
-# export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
 
 ####################### Docker #########################
 alias d=docker
