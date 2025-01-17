@@ -267,6 +267,7 @@ alias gs="git stat"
 alias gcm="git commit -m"
 alias gp="git pull"
 alias gps="git push"
+alias gap="git add -p"
 alias gdas="git diff && git stat"
 # https://stackoverflow.com/questions/2466821/how-do-i-pipe-in-filemerge-as-a-diff-tool-with-git-on-os-x
 alias gdopendiff="git difftool -t opendiff -y"
@@ -349,3 +350,9 @@ alias d=docker
 alias dl='docker images'
 alias dr='docker run'
 alias doc=docker-compose
+
+####################### Rust #########################
+source /Users/ryan/.asdf/installs/rust/1.61.0/env
+
+####################### PNPM #########################
+alias p=pnpm
