@@ -335,6 +335,8 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 alias yr="yarn run"
 
 ####################### Home Brew #########################
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # load all installed completions (https://apple.stackexchange.com/questions/103818/bash-not-running-script-at-opt-local-etc-bash-completion-d):
 if [ -d /usr/local/etc/bash_completion.d ]; then
      for F in "/usr/local/etc/bash_completion.d/"*; do
