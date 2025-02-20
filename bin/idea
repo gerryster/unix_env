@@ -2,4 +2,4 @@
 
 # From https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox
 
-open -na "IntelliJ IDEA CE.app" --args "$@"
+open -na "IntelliJ IDEA Community Edition.app" --args "$@"
