@@ -271,6 +271,7 @@ alias gap="git add -p"
 alias gdas="git diff && git stat"
 # https://stackoverflow.com/questions/2466821/how-do-i-pipe-in-filemerge-as-a-diff-tool-with-git-on-os-x
 alias gdopendiff="git difftool -t opendiff -y"
+alias gdmeld="git difftool -t meld -y"
 alias gc="git ci"
 alias gd="git diff"
 alias gds="git diff --staged"
@@ -358,3 +359,8 @@ source /Users/ryan/.asdf/installs/rust/1.61.0/env
 
 ####################### PNPM #########################
 alias p=pnpm
+
+####################### Kubernetes #########################
+alias k='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'
