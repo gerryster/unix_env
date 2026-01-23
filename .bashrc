@@ -133,7 +133,7 @@ HISTFILESIZE=10000
 
 export PATH=$HOME/bin:\
 $HOME/local/bin:\
-/usr/local/bin:\
+$HOME/.local/bin:usr/local/bin:\
 /usr/local/sbin:\
 $PATH
 
@@ -364,3 +364,10 @@ alias p=pnpm
 alias k='kubectl'
 alias kctx='kubectx'
 alias kns='kubens'
+
+
+####################### Deno #########################
+if [ -d "$HOME/.deno/env" ]; then
+  source "$HOME/.deno/env"
+  source "$HOME/.local/share/bash-completion/completions/deno.bash"
+fi
