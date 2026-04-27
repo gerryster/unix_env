@@ -97,8 +97,6 @@ fi
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-alias sshg="ssh-add ~/.ssh/id-github"
-
 determine_previous_command_result() {
   local result=$?
   case "$result" in
@@ -280,6 +278,9 @@ alias gds="git diff --staged"
 alias gdh="git diff head"
 # Adapted from http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit :
 alias grecent="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | tail"
+alias sshg="ssh-add ~/.ssh/id-github"
+alias gfco="git fetch && git co"
+
 
 # Thanks MHB!
 # use "gitg --all" to see the whole tree
