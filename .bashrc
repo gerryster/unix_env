@@ -97,6 +97,8 @@ fi
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
+alias sshg="ssh-add ~/.ssh/id-github"
+
 determine_previous_command_result() {
   local result=$?
   case "$result" in
