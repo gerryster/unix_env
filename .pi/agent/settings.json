@@ -1,0 +1,14 @@
+{
+  "compaction": {
+    "enabled": false
+  },
+  "lastChangelogVersion": "0.84.1",
+  "theme": "dark",
+  "defaultProvider": "amazon-bedrock",
+  "defaultModel": "global.anthropic.claude-sonnet-5",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-web-search",
+    "../../Documents/adaptive-compact"
+  ]
+}
